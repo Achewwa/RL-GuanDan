@@ -51,8 +51,9 @@ class ActionGenerator:
 
             actions.append({'player': player_id, 'action': cand, 'claim': cand})
 
-        # Always expose a pass action (environment will decide legality if used first-hand).
-        actions.append({'player': player_id, 'action': [], 'claim': []})
+        # Unless the first to act, always expose a pass action (environment will decide legality if used first-hand).
+        if has_last:
+            actions.append({'player': player_id, 'action': [], 'claim': []})
 
         rank_groups = self._group_by_rank(deck)
 

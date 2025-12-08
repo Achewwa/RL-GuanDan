@@ -22,7 +22,7 @@ class RLGuanDanAgent:
         self.action_generator = action_generator
         self.device = device
 
-    def _compute_action_distribution(self, obs_for_player: dict, explore: bool = True) -> Tuple[List[dict], torch.Tensor, torch.Tensor]:
+    def _compute_action_distribution(self, obs_for_player: dict, explore: bool = True) -> Tuple[List[dict], torch.Tensor, torch.Tensor, list, list]:
         candidate_actions = self.action_generator.generate_legal_actions(obs_for_player)
 
         has_non_pass = any(action.get('claim') for action in candidate_actions)
@@ -44,10 +44,10 @@ class RLGuanDanAgent:
         probabilities = F.softmax(logits_flat, dim=0)
         log_probabilities = F.log_softmax(logits_flat, dim=0)
 
-        return candidate_actions, probabilities, log_probabilities
+        return candidate_actions, probabilities, log_probabilities, state_vec, action_vecs
 
     def select_action(self, obs_for_player: dict, explore: bool = True) -> dict:
-        candidate_actions, probabilities, _ = self._compute_action_distribution(obs_for_player, explore=explore)
+        candidate_actions, probabilities, _, _, _ = self._compute_action_distribution(obs_for_player, explore=explore)
 
         if explore:
             action_idx = torch.multinomial(probabilities, 1).item()
@@ -57,7 +57,7 @@ class RLGuanDanAgent:
         return candidate_actions[action_idx]
 
     def select_action_with_logprob(self, obs_for_player: dict, explore: bool = True) -> Tuple[dict, int, torch.Tensor]:
-        candidate_actions, probabilities, log_probabilities = self._compute_action_distribution(obs_for_player, explore=explore)
+        candidate_actions, probabilities, log_probabilities, _, _ = self._compute_action_distribution(obs_for_player, explore=explore)
 
         if explore:
             action_idx = torch.multinomial(probabilities, 1).item()

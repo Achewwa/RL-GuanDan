@@ -1,6 +1,6 @@
 import os
 import random
-from typing import List, Tuple, Dict
+from typing import List, Tuple
 
 import numpy as np
 import torch
@@ -14,7 +14,7 @@ from env import GuanDanEnv
 from models.policy_value_net import PolicyValueNet
 from selfplay.replay_buffer import ReplayBuffer, Transition
 
-TRAIN_LEVELS = list(range(13))
+TRAIN_LEVELS = ['2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K', 'A']
 # Toggle to train across all levels or stick to one fixed level.
 train_all_levels = True
 fixed_level = 0
@@ -25,7 +25,8 @@ def make_shared_components(device: str) -> Tuple[GuanDanEnv, FeatureEncoder, Act
     feature_encoder = FeatureEncoder()
     action_generator = ActionGenerator(env)
 
-    obs = env.reset({})
+    initial_level = TRAIN_LEVELS[0]
+    obs = env.reset({'level': initial_level})
     first_player = list(obs.keys())[0]
     obs_player = obs[first_player]
     state_vec = feature_encoder.encode_state(obs_player)
@@ -56,21 +57,23 @@ def collect_rollout(env: GuanDanEnv, agents: List[RLGuanDanAgent], feature_encod
             current_player = list(obs.keys())[0]
             obs_player = obs[current_player]
 
-            state_vec = feature_encoder.encode_state(obs_player)
-            chosen_action, chosen_index, log_prob = agents[current_player].select_action_with_logprob(obs_player, explore=True)
-            action_feat = feature_encoder.encode_action(chosen_action)
+            candidate_actions, probabilities, log_probabilities, state_vec, action_vecs = agents[current_player]._compute_action_distribution(obs_player, explore=True)
+            action_idx = torch.multinomial(probabilities, 1).item()
+
+            chosen_action = candidate_actions[action_idx]
+            chosen_log_prob = log_probabilities[action_idx].detach()
 
             obs = env.step(chosen_action)
             reward = env.reward.get(current_player, 0)
             done = env.done
 
             transition = Transition(
-                state=state_vec,
-                action_feat=action_feat,
-                action_index=chosen_index,
+                state=np.asarray(state_vec, dtype=np.float32),
+                candidate_action_feats=np.asarray(action_vecs, dtype=np.float32),
+                action_index=action_idx,
                 reward=float(reward),
                 done=bool(done),
-                log_prob=float(log_prob)
+                log_prob=float(chosen_log_prob)  # log-softmax of chosen action
             )
             replay_buffer.add_transition(transition)
 
@@ -93,49 +96,71 @@ def compute_returns_and_advantages(rewards: torch.Tensor, dones: torch.Tensor, v
     return returns, advantages
 
 
-def ppo_update(policy_value_net: PolicyValueNet, optimizer: torch.optim.Optimizer, batch: Dict[str, torch.Tensor], clip_epsilon: float, value_loss_coef: float, entropy_coef: float, epochs: int, minibatch_size: int) -> None:
-    states = batch['states']
-    action_feats = batch['action_feats']
-    actions_idx = batch['actions_idx']
-    returns = batch['returns']
-    advantages = batch['advantages']
-    old_log_probs = batch['old_log_probs']
+def compute_state_values(policy_value_net: PolicyValueNet, transitions: List[Transition], device: str) -> torch.Tensor:
+    values = []
+    with torch.no_grad():
+        for t in transitions:
+            state_tensor = torch.tensor(t.state, dtype=torch.float32, device=device)
+            action_tensor = torch.tensor(t.candidate_action_feats, dtype=torch.float32, device=device)
+            state_batch = state_tensor.unsqueeze(0).repeat(action_tensor.shape[0], 1)
+            _, vals = policy_value_net(state_batch, action_tensor)
+            values.append(vals[0, 0].detach().item())
+    return torch.tensor(values, dtype=torch.float32, device=device)
 
+
+def ppo_update(policy_value_net: PolicyValueNet, optimizer: torch.optim.Optimizer, transitions: List[Transition], returns: torch.Tensor, advantages: torch.Tensor, clip_epsilon: float, value_loss_coef: float, entropy_coef: float, epochs: int) -> None:
+    num_samples = len(transitions)
     advantages = (advantages - advantages.mean()) / (advantages.std() + 1e-8)
 
-    num_samples = states.shape[0]
     for _ in range(epochs):
         indices = torch.randperm(num_samples)
-        for start in range(0, num_samples, minibatch_size):
-            end = start + minibatch_size
-            mb_idx = indices[start:end]
+        total_policy_loss = 0.0
+        total_value_loss = 0.0
+        total_entropy = 0.0
 
-            states_mb = states[mb_idx]
-            action_feats_mb = action_feats[mb_idx]
-            returns_mb = returns[mb_idx]
-            advantages_mb = advantages[mb_idx]
-            old_log_probs_mb = old_log_probs[mb_idx]
+        for idx in indices:
+            t = transitions[idx]
+            ret = returns[idx]
+            adv = advantages[idx]
 
-            logits, values = policy_value_net(states_mb, action_feats_mb)
-            new_log_probs = logits.squeeze(-1)
+            state_tensor = torch.tensor(t.state, dtype=torch.float32, device=ret.device)
+            action_tensor = torch.tensor(t.candidate_action_feats, dtype=torch.float32, device=ret.device)
+            state_batch = state_tensor.unsqueeze(0).repeat(action_tensor.shape[0], 1)
 
-            ratios = torch.exp(new_log_probs - old_log_probs_mb)
-            surr1 = ratios * advantages_mb
-            surr2 = torch.clamp(ratios, 1.0 - clip_epsilon, 1.0 + clip_epsilon) * advantages_mb
-            policy_loss = -torch.min(surr1, surr2).mean()
+            logits, values = policy_value_net(state_batch, action_tensor)
+            logits = logits.squeeze(-1)
+            log_probs_new = F.log_softmax(logits, dim=0)
+            probs_new = log_probs_new.exp()
 
-            value_loss = F.mse_loss(values.squeeze(-1), returns_mb)
+            # PPO ratio computed with log-softmax over all candidates (old log_prob stored the same way).
+            new_log_prob = log_probs_new[t.action_index]
+            v_s = values[0, 0]
 
-            # Approximate entropy using a binary distribution over the chosen action probability.
-            probs = torch.sigmoid(new_log_probs)
-            entropy = (-probs * torch.log(probs + 1e-8) - (1.0 - probs) * torch.log(1.0 - probs + 1e-8)).mean()
+            old_log_prob = torch.tensor(t.log_prob, dtype=torch.float32, device=ret.device)
 
-            loss = policy_loss + value_loss_coef * value_loss - entropy_coef * entropy
+            ratio = torch.exp(new_log_prob - old_log_prob)
+            surr1 = ratio * adv
+            surr2 = torch.clamp(ratio, 1.0 - clip_epsilon, 1.0 + clip_epsilon) * adv
+            policy_loss = -torch.min(surr1, surr2)
 
-            optimizer.zero_grad()
-            loss.backward()
-            torch.nn.utils.clip_grad_norm_(policy_value_net.parameters(), max_norm=0.5)
-            optimizer.step()
+            value_loss = F.mse_loss(v_s, ret)
+
+            entropy = -(probs_new * log_probs_new).sum()
+
+            total_policy_loss = total_policy_loss + policy_loss
+            total_value_loss = total_value_loss + value_loss
+            total_entropy = total_entropy + entropy
+
+        total_policy_loss = total_policy_loss / num_samples
+        total_value_loss = total_value_loss / num_samples
+        total_entropy = total_entropy / num_samples
+
+        loss = total_policy_loss + value_loss_coef * total_value_loss - entropy_coef * total_entropy
+
+        optimizer.zero_grad()
+        loss.backward()
+        torch.nn.utils.clip_grad_norm_(policy_value_net.parameters(), max_norm=0.5)
+        optimizer.step()
 
 
 def evaluate_policy(env: GuanDanEnv, policy_value_net: PolicyValueNet, feature_encoder: FeatureEncoder, action_generator: ActionGenerator, num_episodes: int, device: str) -> float:
@@ -197,18 +222,16 @@ def main() -> None:
     for update_idx in range(1, total_updates + 1):
         collect_rollout(env, agents, feature_encoder, action_generator, replay_buffer, rollout_episodes_per_update, device)
 
-        batch = replay_buffer.to_training_batch(device=device)
-        with torch.no_grad():
-            _, values = policy_value_net(batch['states'], batch['action_feats'])
-            values = values.squeeze(-1)
-        returns, advantages = compute_returns_and_advantages(batch['rewards'], batch['dones'], values, gamma=gamma, lam=lam)
-        batch['returns'] = returns
-        batch['advantages'] = advantages
+        transitions = replay_buffer.to_training_batch()
+        rewards = torch.tensor([t.reward for t in transitions], dtype=torch.float32, device=device)
+        dones = torch.tensor([1.0 if t.done else 0.0 for t in transitions], dtype=torch.float32, device=device)
+        values = compute_state_values(policy_value_net, transitions, device=device)
+        returns, advantages = compute_returns_and_advantages(rewards, dones, values, gamma=gamma, lam=lam)
 
-        ppo_update(policy_value_net, optimizer, batch, clip_epsilon, value_loss_coef, entropy_coef, epochs=4, minibatch_size=64)
+        ppo_update(policy_value_net, optimizer, transitions, returns, advantages, clip_epsilon, value_loss_coef, entropy_coef, epochs=4)
         replay_buffer.clear()
 
-        avg_reward = batch['rewards'].mean().item()
+        avg_reward = rewards.mean().item()
         print(f'Update {update_idx}: avg reward {avg_reward:.3f}')
 
         if update_idx % eval_interval == 0:

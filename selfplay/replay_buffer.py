@@ -1,18 +1,15 @@
 from dataclasses import dataclass
-from typing import List, Dict, Any
-
-import numpy as np
-import torch
+from typing import List, Any
 
 
 @dataclass
 class Transition:
-    state: Any
-    action_feat: Any
+    state: Any  # encoded state vector
+    candidate_action_feats: Any  # all candidate action encodings for this step
     action_index: int
     reward: float
     done: bool
-    log_prob: float
+    log_prob: float  # log-softmax of the chosen action at sampling time
 
 
 class ReplayBuffer:
@@ -32,22 +29,9 @@ class ReplayBuffer:
     def __len__(self) -> int:
         return len(self.storage)
 
-    def to_training_batch(self, device: str = 'cpu') -> Dict[str, torch.Tensor]:
-        states = np.stack([np.asarray(t.state, dtype=np.float32) for t in self.storage], axis=0)
-        action_feats = np.stack([np.asarray(t.action_feat, dtype=np.float32) for t in self.storage], axis=0)
-        actions_idx = np.array([t.action_index for t in self.storage], dtype=np.int64)
-        rewards = np.array([t.reward for t in self.storage], dtype=np.float32)
-        dones = np.array([1.0 if t.done else 0.0 for t in self.storage], dtype=np.float32)
-        old_log_probs = np.array([t.log_prob for t in self.storage], dtype=np.float32)
-
-        return {
-            'states': torch.tensor(states, dtype=torch.float32, device=device),
-            'action_feats': torch.tensor(action_feats, dtype=torch.float32, device=device),
-            'actions_idx': torch.tensor(actions_idx, dtype=torch.long, device=device),
-            'rewards': torch.tensor(rewards, dtype=torch.float32, device=device),
-            'dones': torch.tensor(dones, dtype=torch.float32, device=device),
-            'old_log_probs': torch.tensor(old_log_probs, dtype=torch.float32, device=device),
-        }
+    def to_training_batch(self, device: str = 'cpu') -> List[Transition]:
+        # Return raw transitions so callers can handle variable-sized candidate sets.
+        return list(self.storage)
 
     def clear(self) -> None:
         self.storage.clear()

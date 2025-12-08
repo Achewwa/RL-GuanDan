@@ -188,6 +188,7 @@ class GuanDanEnv():
         }
         self.done = True
         self.reward[fault_player] = -3
+        print(self.game_state_info)
         return self._get_obs(-1)
     
     def _get_obs(self, player):
