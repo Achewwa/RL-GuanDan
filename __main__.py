@@ -137,8 +137,8 @@ def process_request(raw_line):
 
 
 def main():
-    for line in sys.stdin:
-        line = line.strip()
+    while True:
+        line = input()
         if not line:
             continue
         response = process_request(line)
