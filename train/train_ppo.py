@@ -9,7 +9,9 @@ import torch.nn.functional as F
 from agents.action_generator import ActionGenerator
 from agents.feature_encoder import FeatureEncoder
 from agents.rl_agent import RLGuanDanAgent
+from agents.base_agent import BaseAgent
 from agents.rule_agent import RuleBasedAgent
+from agents.random_agent import RandomAgent
 from env import GuanDanEnv
 from models.policy_value_net import PolicyValueNet
 from selfplay.replay_buffer import ReplayBuffer, Transition
@@ -17,16 +19,17 @@ from selfplay.replay_buffer import ReplayBuffer, Transition
 TRAIN_LEVELS = ['2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K', 'A']
 # Toggle to train across all levels or stick to one fixed level.
 train_all_levels = True
-fixed_level = 0
+fixed_level = '2'
 
 
 def make_shared_components(device: str) -> Tuple[GuanDanEnv, FeatureEncoder, ActionGenerator, PolicyValueNet, int, int]:
     env = GuanDanEnv()
-    feature_encoder = FeatureEncoder()
-    action_generator = ActionGenerator(env)
 
     initial_level = TRAIN_LEVELS[0]
     obs = env.reset({'level': initial_level})
+    action_generator = ActionGenerator(env)
+    feature_encoder = FeatureEncoder(env)
+    
     first_player = list(obs.keys())[0]
     obs_player = obs[first_player]
     state_vec = feature_encoder.encode_state(obs_player)
@@ -163,12 +166,12 @@ def ppo_update(policy_value_net: PolicyValueNet, optimizer: torch.optim.Optimize
         optimizer.step()
 
 
-def evaluate_policy(env: GuanDanEnv, policy_value_net: PolicyValueNet, feature_encoder: FeatureEncoder, action_generator: ActionGenerator, num_episodes: int, device: str) -> float:
+def evaluate_policy(env: GuanDanEnv, opponent_agent: BaseAgent, policy_value_net: PolicyValueNet, feature_encoder: FeatureEncoder, action_generator: ActionGenerator, num_episodes: int, device: str) -> float:
     rl_agents = [
         RLGuanDanAgent(policy_value_net, feature_encoder, action_generator, device=device),
         RLGuanDanAgent(policy_value_net, feature_encoder, action_generator, device=device)
     ]
-    rule_agents = [RuleBasedAgent(env), RuleBasedAgent(env)]
+    rule_agents = [opponent_agent(env), opponent_agent(env)]
 
     rl_team = {0: rl_agents[0], 2: rl_agents[1]}
     rule_team = {1: rule_agents[0], 3: rule_agents[1]}
@@ -201,6 +204,7 @@ def evaluate_policy(env: GuanDanEnv, policy_value_net: PolicyValueNet, feature_e
 
 def main() -> None:
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    print('device: ', device)
 
     env, feature_encoder, action_generator, policy_value_net, state_dim, action_dim = make_shared_components(device)
     agents = create_rl_agents(env, policy_value_net, feature_encoder, action_generator, device)
@@ -212,12 +216,12 @@ def main() -> None:
     lam = 0.95
     clip_epsilon = 0.2
     value_loss_coef = 0.5
-    entropy_coef = 0.02
-    rollout_episodes_per_update = 8
-    total_updates = 200
-    eval_interval = 20
-    num_eval_episodes = 10
-    save_interval = 50
+    entropy_coef = 0.01
+    rollout_episodes_per_update = 16
+    total_updates = 1000
+    eval_interval = 50
+    num_eval_episodes = 30
+    save_interval = 100
 
     for update_idx in range(1, total_updates + 1):
         collect_rollout(env, agents, feature_encoder, action_generator, replay_buffer, rollout_episodes_per_update, device)
@@ -235,8 +239,10 @@ def main() -> None:
         print(f'Update {update_idx}: avg reward {avg_reward:.3f}')
 
         if update_idx % eval_interval == 0:
-            win_rate = evaluate_policy(env, policy_value_net, feature_encoder, action_generator, num_eval_episodes, device)
-            print(f'Eval after update {update_idx}: RL win rate {win_rate:.2f}')
+            win_rate = evaluate_policy(env, RuleBasedAgent, policy_value_net, feature_encoder, action_generator, num_eval_episodes, device)
+            print(f'Eval after update {update_idx}: RL v.s. Rule_based win rate {win_rate:.2f}')
+            win_rate = evaluate_policy(env, RandomAgent, policy_value_net, feature_encoder, action_generator, num_eval_episodes, device)
+            print(f'Eval after update {update_idx}: RL v.s. Random win rate {win_rate:.2f}')
 
         if update_idx % save_interval == 0:
             os.makedirs('models', exist_ok=True)

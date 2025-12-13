@@ -7,7 +7,7 @@ from utils import Utils
 class FeatureEncoder:
     '''Simple, deterministic encodings for GuanDan states and actions.'''
 
-    def __init__(self):
+    def __init__(self, env):
         # Card rank ordering used across encodings; jokers appended.
         self.rank_order = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K', 'o', 'O']
         self.rank_to_idx = {rank: idx for idx, rank in enumerate(self.rank_order)}
@@ -27,7 +27,7 @@ class FeatureEncoder:
         ]
         self.type_to_idx = {ctype: idx for idx, ctype in enumerate(self.card_types)}
         self.utils = Utils()
-        self.env = GuanDanEnv()
+        self.env = env
         self.current_level = None
 
     def encode_state(self, obs_for_player: dict) -> np.ndarray:

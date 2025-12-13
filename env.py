@@ -77,18 +77,19 @@ class GuanDanEnv():
         action = response['action']
         claim = response['claim']
         if not self._is_legal_claim(action, claim): # not a legal claim
-            self.game_state_info = f"Player {curr_player}: ILLEGAL CLAIM"
+            self.game_state_info = f"Player {curr_player}: ILLEGAL CLAIM\nclaim: {self.Utils.Nums2Pokers(claim)}\naction: {self.Utils.Nums2Pokers(action)}"
             return self._end_game(curr_player)
+        temp = self.player_decks[curr_player][:]
         for poker_no in action: 
             if poker_no in self.player_decks[curr_player]:
                 self.player_decks[curr_player].remove(poker_no)
                 self.played_cards[curr_player].append(poker_no)
             else:
-                self.game_state_info = f"Player {curr_player}: NOT YOUR POKER"
+                self.game_state_info = f"Player {curr_player}: NOT YOUR POKER\ndeck:{temp}\naction:{action}\n{self.Utils.Nums2Pokers(action)}\nclaim:{claim}\n{self.Utils.Nums2Pokers(claim)}"
                 return self._end_game(curr_player)
         cur_pokertype, cur_points = self._check_poker_type(claim)
         if cur_pokertype == 'invalid':
-            self.game_state_info = f"Player {curr_player}: INVALID TYPE"
+            self.game_state_info = f"Player {curr_player}: INVALID TYPE\nclaim: {self.Utils.Nums2Pokers(claim)}\naction: {self.Utils.Nums2Pokers(action)}"
             return self._end_game(curr_player)
         if len(self.lastMove['action']) == 0: # first-hand
             if cur_pokertype == 'pass':
@@ -104,7 +105,8 @@ class GuanDanEnv():
                     self.game_state_info = f"Player {curr_player}: POKERTYPE MISMATCH"
                     return self._end_game(curr_player)
                 if not bigger:
-                    self.game_state_info = f"Player {curr_player}: CANNOT BEAT LASTMOVE"
+                    self.game_state_info = f"Player {curr_player}: CANNOT BEAT LASTMOVE \n last: {last_pokertype} + {last_points}\n curr: {cur_pokertype} + {cur_points}"
+                    
                     return self._end_game(curr_player)
                 self.lastMove = response
                 self.pass_on = -1

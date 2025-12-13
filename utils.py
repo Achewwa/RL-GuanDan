@@ -1,5 +1,6 @@
 import numpy as np
 import random
+from typing import List, Dict
 
 
 class Utils():
@@ -33,6 +34,12 @@ class Utils():
         if num_in_deck in deck:
             return num_in_deck
         return num_in_deck + 54
+    
+    def Nums2Pokers(self, nums: List[int]):
+        return [self.Num2Poker(num) for num in nums]
+
+    def Pokers2Nums(self, pokers: List[str], deck):
+        return [self.Poker2Num(poker, deck) for poker in pokers]
     
 class Error(Exception):
     def __init__(self, ErrorInfo):

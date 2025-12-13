@@ -1,5 +1,6 @@
 import torch
 import torch.nn.functional as F
+import numpy as np
 from typing import List, Tuple
 
 from agents.action_generator import ActionGenerator
@@ -36,6 +37,7 @@ class RLGuanDanAgent:
         state_tensor = torch.tensor(state_vec, dtype=torch.float32, device=self.device)
         state_batch = state_tensor.unsqueeze(0).repeat(len(action_vecs), 1)
 
+        action_vecs = np.asarray(action_vecs, dtype=np.float32)
         action_tensor = torch.tensor(action_vecs, dtype=torch.float32, device=self.device)
 
         logits, _ = self.policy_value_net(state_batch, action_tensor)

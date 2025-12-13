@@ -1,20 +1,9 @@
 from typing import List, Tuple
-
-from agents.action_generator import ActionGenerator
-from env import GuanDanEnv
-from utils import Utils
+from agents.base_agent import BaseAgent
 
 
-class RuleBasedAgent:
+class RuleBasedAgent(BaseAgent):
     '''Deterministic, lightweight baseline agent for Guandan.'''
-
-    def __init__(self, env: GuanDanEnv):
-        self.env = env
-        self.action_generator = ActionGenerator(env)
-        self.utils = Utils()
-        self.rank_order = self.utils.cardscale + ['o', 'O']
-        self.rank_to_idx = {rank: idx for idx, rank in enumerate(self.rank_order)}
-
     def select_action(self, obs_for_player: dict) -> dict:
         candidate_actions = self.action_generator.generate_legal_actions(obs_for_player)
         pass_action = next((act for act in candidate_actions if not act.get('claim')), candidate_actions[0])
@@ -45,7 +34,7 @@ class RuleBasedAgent:
             return self._best_action(non_bomb_actions)
 
         # Avoid bombs unless few cards remain or no other options can beat the last move.
-        if bomb_actions and (deck_size <= 3 or not non_bomb_actions):
+        if bomb_actions and (deck_size <= 10 or not non_bomb_actions):
             return self._best_action(bomb_actions)
 
         return pass_action
@@ -56,15 +45,24 @@ class RuleBasedAgent:
         return hand_type in ['bomb', 'rocket']
 
     def _best_action(self, actions: List[dict]) -> dict:
-        '''Deterministically pick the lexicographically smallest action by size then rank.'''
-        return min(actions, key=self._action_rank_key)
+        
+        def key_fun(a):
+            # 统计 a 被多少个动作压过
+            beaten_count = 0
+            for b in actions:
+                if b is not a and self._is_strictly_bigger(b, a):
+                    beaten_count += 1
 
-    def _action_rank_key(self, action: dict) -> Tuple[int, int, Tuple[int, ...], Tuple[int, ...]]:
-        claim = action.get('claim', [])
-        if not claim:
-            return (float('inf'), float('inf'), (), ())
-        ranks = [self.utils.Num2Poker(card)[1] for card in claim]
-        rank_indices = [self.rank_to_idx.get(rank, len(self.rank_to_idx)) for rank in ranks]
-        min_rank = min(rank_indices) if rank_indices else len(self.rank_to_idx)
-        # Include sorted raw card ids as a final tie-breaker for full determinism.
-        return (len(claim), min_rank, tuple(sorted(rank_indices)), tuple(sorted(claim)))
+            return beaten_count
+
+        return min(actions, key=key_fun)
+
+    def _is_strictly_bigger(self, a: dict, b: dict) -> bool:
+        claim_a = a.get('claim', [])
+        claim_b = b.get('claim', [])
+
+        type_a, pts_a = self.env._check_poker_type(claim_a)
+        type_b, pts_b = self.env._check_poker_type(claim_b)
+
+        # _check_bigger(type_b, pts_b, type_a, pts_a) 判定 a > b ?
+        return self.env._check_bigger(type_b, pts_b, type_a, pts_a) is True
