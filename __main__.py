@@ -56,7 +56,7 @@ agent = RLGuanDanAgent(
     device='cpu'
 )
 
-def remove_cards_from_hand(cards):
+def remove_cards_from_deck(cards):
     for c in cards:
         if c in STATE['deck']:
             STATE['deck'].remove(c)
@@ -71,7 +71,7 @@ def strength_index(card):
 
 def handle_deal(req):
     STATE['id'] = req.get('your_id', 0)
-    STATE['hand'] = sorted(req.get('deliver', []))
+    STATE['deck'] = sorted(req.get('deliver', []))
     STATE['history'] = []
     global_info = req.get('global', {})
 
@@ -113,7 +113,7 @@ def handle_play(req):
     selected = agent.select_action(obs, explore=False)
     action = selected.get('action', []) or []
     claim = selected.get('claim', []) or action
-    remove_cards_from_hand(action)
+    remove_cards_from_deck(action)
 
     return [action, claim]
 
