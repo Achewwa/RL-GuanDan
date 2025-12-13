@@ -26,7 +26,7 @@ STATE = {
     'level': '2',
     'deck': [],
     'history': [],
-    'last_move': []
+    'last_move': {}
 }
 
 utils = Utils()
@@ -75,7 +75,7 @@ def handle_deal(req):
     STATE['history'] = []
     global_info = req.get('global', {})
 
-    STATE['level'] = global_info.get('level')
+    STATE['level'] = global_info.get('level', '2')
     env.reset({'level': STATE['level']})
     return []
 
@@ -87,20 +87,21 @@ def handle_play(req):
     short_history = req.get('history', None)
     if short_history:
         for record in short_history:
-            if len(record) > 0:
-                player_id = record.get('player', 0)
-                res = record.get('response', [])
-                if len(res) == 2:
-                    action, claim = res
-                    rec_converted = {
-                        'player': player_id,
-                        'action': action,
-                        'claim': claim
-                    }
-                    STATE['history'].append(rec_converted)
+            if not isinstance(record, dict) or len(record) == 0:
+                continue
+            player_id = record.get('player', 0)
+            res = record.get('response', [])
+            if len(res) == 2:
+                action, claim = res
+                rec_converted = {
+                    'player': player_id,
+                    'action': action,
+                    'claim': claim
+                }
+                STATE['history'].append(rec_converted)
 
-                    if player_id == pass_on:
-                        STATE['last_move'] = rec_converted
+                if player_id == pass_on:
+                    STATE['last_move'] = rec_converted
 
     obs = {
         'id': STATE['id'],
