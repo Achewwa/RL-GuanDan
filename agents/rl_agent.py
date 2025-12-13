@@ -32,7 +32,7 @@ class RLGuanDanAgent:
             candidate_actions = [{'player': player_id, 'action': [], 'claim': []}]
 
         state_vec = self.feature_encoder.encode_state(obs_for_player)
-        action_vecs = [self.feature_encoder.encode_action(action) for action in candidate_actions]
+        action_vecs = [self.feature_encoder.encode_action(obs_for_player, action) for action in candidate_actions]
 
         state_tensor = torch.tensor(state_vec, dtype=torch.float32, device=self.device)
         state_batch = state_tensor.unsqueeze(0).repeat(len(action_vecs), 1)

@@ -18,7 +18,7 @@ from selfplay.replay_buffer import ReplayBuffer, Transition
 
 TRAIN_LEVELS = ['2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K', 'A']
 # Toggle to train across all levels or stick to one fixed level.
-train_all_levels = True
+train_all_levels = False
 fixed_level = '2'
 
 
@@ -36,7 +36,7 @@ def make_shared_components(device: str) -> Tuple[GuanDanEnv, FeatureEncoder, Act
     candidate_actions = action_generator.generate_legal_actions(obs_player)
     if not candidate_actions:
         candidate_actions = [{'player': first_player, 'action': [], 'claim': []}]
-    action_vec = feature_encoder.encode_action(candidate_actions[0])
+    action_vec = feature_encoder.encode_action(obs_player, candidate_actions[0])
 
     state_dim = len(state_vec)
     action_dim = len(action_vec)

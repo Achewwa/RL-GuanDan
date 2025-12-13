@@ -38,25 +38,7 @@ class ActionGenerator:
 
         actions: List[dict] = []
         seen: set = set()
-
-        def add_candidate(cards: List[int]):
-            '''Validate and keep a candidate action if it beats last_move (when needed).'''
-            cand = sorted(cards)
-            key = tuple(cand)
-            if key in seen:
-                return
-            seen.add(key)
-
-            hand_type, hand_points = self.env._check_poker_type(cand)
-            if hand_type == 'invalid':
-                return
-            if has_last:
-                bigger = self.env._check_bigger(last_type, last_points, hand_type, hand_points)
-                if bigger is not True:
-                    return
-
-            actions.append({'player': player_id, 'action': cand, 'claim': cand})
-
+        
         # Unless the first player to act, always expose a pass action (environment will decide legality if used first-hand).
         if has_last:
             actions.append({'player': player_id, 'action': [], 'claim': []})
