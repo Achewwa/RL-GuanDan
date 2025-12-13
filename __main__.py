@@ -31,7 +31,7 @@ STATE = {
 
 utils = Utils()
 env = GuanDanEnv()
-encoder = FeatureEncoder()
+encoder = FeatureEncoder(env)
 action_gen = ActionGenerator(env)
 
 # Model dimensions derived from encoders.
