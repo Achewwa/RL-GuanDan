@@ -22,11 +22,11 @@ def sort_ids_by_mod54(card_ids):
 
 def build_policy_from_checkpoint(device: str):
     env_probe = GuanDanEnv()
-    feature_encoder = FeatureEncoder()
 
     probe_level = '2'
     obs = env_probe.reset({'level': probe_level})
     action_generator = ActionGenerator(env_probe)
+    feature_encoder = FeatureEncoder(env_probe)
     probe_player = list(obs.keys())[0]
     obs_player = obs[probe_player]
 
@@ -41,8 +41,8 @@ def build_policy_from_checkpoint(device: str):
 
     policy_net = PolicyValueNet(state_dim=state_dim, action_dim=action_dim, hidden_dim=128).to(device)
 
-    checkpoint_candidates = ['model/ppo_checkpoint.pt', 'models/ppo_checkpoint.pt']
-    checkpoint_path = next((path for path in checkpoint_candidates if os.path.exists(path)), None)
+    path = 'models/ppo_checkpoint.pt'
+    checkpoint_path = path if os.path.exists(path) else None
     if checkpoint_path is None:
         raise FileNotFoundError('Could not find PPO checkpoint at model/ppo_checkpoint.pt or models/ppo_checkpoint.pt')
 

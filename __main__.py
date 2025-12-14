@@ -35,11 +35,11 @@ encoder = FeatureEncoder(env)
 action_gen = ActionGenerator(env)
 
 # Model dimensions derived from encoders.
-STATE_DIM = 66
-ACTION_DIM = 31
+STATE_DIM = 103
+ACTION_DIM = 41
 
 policy_net = PolicyValueNet(STATE_DIM, ACTION_DIM)
-MODEL_PATH = '/data/GuanDan_001.pt'
+MODEL_PATH = '/data/GuanDan_002.pt'
 try:
     loaded = torch.load(MODEL_PATH, map_location='cpu')
     if isinstance(loaded, dict):

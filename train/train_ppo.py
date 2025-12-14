@@ -67,7 +67,15 @@ def collect_rollout(env: GuanDanEnv, agents: List[RLGuanDanAgent], feature_encod
             chosen_log_prob = log_probabilities[action_idx].detach()
 
             obs = env.step(chosen_action)
+            last_move = obs_player.get('last_move', {})
+            last_player = last_move.get('player', -1)
+            has_last = last_move.get('claim', [])
+            is_pass = (chosen_action.get('claim', []) == [])
+
             reward = env.reward.get(current_player, 0)
+            if has_last and is_pass and (last_player + current_player) % 2 != 0:
+                reward -= 0.01
+            
             done = env.done
 
             transition = Transition(
@@ -81,6 +89,90 @@ def collect_rollout(env: GuanDanEnv, agents: List[RLGuanDanAgent], feature_encod
             replay_buffer.add_transition(transition)
 
             if done:
+                break
+
+def collect_rollout_with_mix_ratio(
+    env: GuanDanEnv,
+    agents: List[RLGuanDanAgent],
+    replay_buffer: ReplayBuffer,
+    num_episodes: int,
+    device: str,
+    self_play_ratio: float = 0.7,
+    opponent_rule_ratio: float = 0.5,
+    pass_penalty: float = 0.01
+) -> None:
+    # Pre-build opponent agent classes; instantiate per episode (depends on env)
+    for _ in range(num_episodes):
+        level = random.choice(TRAIN_LEVELS) if train_all_levels else fixed_level
+        obs = env.reset({'level': level})
+
+        # Decide episode mode
+        use_self_play = (random.random() < self_play_ratio)
+
+        if use_self_play:
+            # All four players are RL
+            player_to_controller = {0: 'rl', 1: 'rl', 2: 'rl', 3: 'rl'}
+        else:
+            # RL team vs mixed opponents
+            player_to_controller = {0: 'rl', 2: 'rl', 1: 'opp', 3: 'opp'}
+            if random.random() < opponent_rule_ratio:
+                opp_1 = RuleBasedAgent(env)
+                opp_3 = RuleBasedAgent(env)
+            else:
+                opp_1 = RandomAgent(env)
+                opp_3 = RandomAgent(env)
+            opponents = {1: opp_1, 3: opp_3}
+
+        while True:
+            if not obs:
+                break
+
+            current_player = list(obs.keys())[0]
+            obs_player = obs[current_player]
+
+            if player_to_controller.get(current_player) == 'rl':
+                agent = agents[current_player]
+
+                candidate_actions, probabilities, log_probabilities, state_vec, action_vecs = agent._compute_action_distribution(
+                    obs_player, explore=True
+                )
+                action_idx = torch.multinomial(probabilities, 1).item()
+                chosen_action = candidate_actions[action_idx]
+                chosen_log_prob = log_probabilities[action_idx].detach()
+
+                next_obs = env.step(chosen_action)
+
+                base_reward = float(env.reward.get(current_player, 0))
+                done = bool(env.done)
+
+                # Pass shaping only for responding (has_last) and pass action
+                last_move = obs_player.get('last_move', {}) or {}
+                last_player = last_move.get('player', -1)
+                has_last = bool(last_move.get('claim', []))
+                is_pass = (chosen_action.get('claim', []) == [])
+                shaped_reward = base_reward
+                if has_last and is_pass and (last_player + current_player) % 2 != 0:
+                    shaped_reward = shaped_reward - float(pass_penalty)
+
+                transition = Transition(
+                    state=np.asarray(state_vec, dtype=np.float32),
+                    candidate_action_feats=np.asarray(action_vecs, dtype=np.float32),
+                    action_index=int(action_idx),
+                    reward=float(shaped_reward),
+                    done=done,
+                    log_prob=float(chosen_log_prob)
+                )
+                replay_buffer.add_transition(transition)
+
+                obs = next_obs
+
+            else:
+                # Opponent step (only exists in mixed mode)
+                opp_agent = opponents[current_player]
+                chosen_action = opp_agent.select_action(obs_player)
+                obs = env.step(chosen_action)
+
+            if env.done:
                 break
 
 
@@ -217,14 +309,26 @@ def main() -> None:
     clip_epsilon = 0.2
     value_loss_coef = 0.5
     entropy_coef = 0.01
-    rollout_episodes_per_update = 16
-    total_updates = 1000
+    rollout_episodes_per_update = 32
+    total_updates = 5000
     eval_interval = 50
-    num_eval_episodes = 30
-    save_interval = 100
+    num_eval_episodes = 50
+    save_interval = 50
+    self_play_ratio = 0.7
+    opponent_rule_ratio = 0.5  # mixed 时 Rule/Random 各一半
+    pass_penalty = 0.01
 
     for update_idx in range(1, total_updates + 1):
-        collect_rollout(env, agents, feature_encoder, action_generator, replay_buffer, rollout_episodes_per_update, device)
+        collect_rollout_with_mix_ratio(
+            env, 
+            agents, 
+            replay_buffer, 
+            rollout_episodes_per_update, 
+            device, 
+            self_play_ratio, 
+            opponent_rule_ratio, 
+            pass_penalty
+        )
 
         transitions = replay_buffer.to_training_batch()
         rewards = torch.tensor([t.reward for t in transitions], dtype=torch.float32, device=device)
@@ -246,8 +350,8 @@ def main() -> None:
 
         if update_idx % save_interval == 0:
             os.makedirs('models', exist_ok=True)
-            torch.save(policy_value_net.state_dict(), 'models/ppo_checkpoint.pt')
-            print('Checkpoint saved to models/ppo_checkpoint.pt')
+            torch.save(policy_value_net.state_dict(), f'models2/ppo_checkpoint_{update_idx}.pt')
+            print(f'Checkpoint saved to models2/ppo_checkpoint_{update_idx}.pt')
 
 
 if __name__ == '__main__':
