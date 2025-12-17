@@ -1,0 +1,9498 @@
+[
+	{
+		"keep_running": false,
+		"memory": 156,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "deal",
+					"deliver": [
+						52,
+						4,
+						99,
+						33,
+						21,
+						66,
+						102,
+						43,
+						54,
+						61,
+						5,
+						94,
+						17,
+						79,
+						46,
+						1,
+						11,
+						86,
+						47,
+						6,
+						90,
+						97,
+						49,
+						83,
+						41,
+						89,
+						80
+					],
+					"your_id": 0,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": -1,
+					"action": "init"
+				},
+				"allocation": [
+					[
+						52,
+						4,
+						99,
+						33,
+						21,
+						66,
+						102,
+						43,
+						54,
+						61,
+						5,
+						94,
+						17,
+						79,
+						46,
+						1,
+						11,
+						86,
+						47,
+						6,
+						90,
+						97,
+						49,
+						83,
+						41,
+						89,
+						80
+					],
+					[
+						72,
+						62,
+						15,
+						0,
+						100,
+						8,
+						7,
+						37,
+						48,
+						93,
+						88,
+						32,
+						31,
+						12,
+						53,
+						69,
+						78,
+						39,
+						29,
+						10,
+						107,
+						44,
+						38,
+						95,
+						25,
+						55,
+						98
+					],
+					[
+						42,
+						58,
+						106,
+						2,
+						27,
+						65,
+						96,
+						40,
+						14,
+						9,
+						13,
+						87,
+						101,
+						19,
+						56,
+						26,
+						34,
+						24,
+						76,
+						85,
+						51,
+						18,
+						23,
+						103,
+						3,
+						28,
+						63
+					],
+					[
+						70,
+						71,
+						22,
+						50,
+						84,
+						82,
+						35,
+						16,
+						30,
+						59,
+						45,
+						105,
+						73,
+						60,
+						77,
+						67,
+						57,
+						36,
+						20,
+						81,
+						91,
+						75,
+						64,
+						68,
+						104,
+						74,
+						92
+					]
+				],
+				"level": "2",
+				"first": null,
+				"last": null,
+				"tribute": 0
+			}
+		},
+		"time": 113,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 456,
+			"verdict": "OK",
+			"response": []
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 317,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "deal",
+					"deliver": [
+						72,
+						62,
+						15,
+						0,
+						100,
+						8,
+						7,
+						37,
+						48,
+						93,
+						88,
+						32,
+						31,
+						12,
+						53,
+						69,
+						78,
+						39,
+						29,
+						10,
+						107,
+						44,
+						38,
+						95,
+						25,
+						55,
+						98
+					],
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null
+					},
+					"your_id": 1
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "deal"
+				}
+			}
+		},
+		"time": 108,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 456,
+			"verdict": "OK",
+			"response": []
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 297,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "deal",
+					"deliver": [
+						42,
+						58,
+						106,
+						2,
+						27,
+						65,
+						96,
+						40,
+						14,
+						9,
+						13,
+						87,
+						101,
+						19,
+						56,
+						26,
+						34,
+						24,
+						76,
+						85,
+						51,
+						18,
+						23,
+						103,
+						3,
+						28,
+						63
+					],
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null
+					},
+					"your_id": 2
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "deal"
+				}
+			}
+		},
+		"time": 108,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 453,
+			"verdict": "OK",
+			"response": []
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 291,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "deal",
+					"deliver": [
+						70,
+						71,
+						22,
+						50,
+						84,
+						82,
+						35,
+						16,
+						30,
+						59,
+						45,
+						105,
+						73,
+						60,
+						77,
+						67,
+						57,
+						36,
+						20,
+						81,
+						91,
+						75,
+						64,
+						68,
+						104,
+						74,
+						92
+					],
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null
+					},
+					"your_id": 3
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "deal"
+				}
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 449,
+			"verdict": "OK",
+			"response": []
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					},
+					"history": [
+						[],
+						[],
+						[],
+						[]
+					],
+					"done": [],
+					"pass_on": -1
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "deal"
+				},
+				"tribute": -1
+			}
+		},
+		"time": 106,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 5,
+			"verdict": "OK",
+			"response": [
+				[
+					80,
+					79,
+					83,
+					89,
+					33,
+					4
+				],
+				[
+					80,
+					79,
+					83,
+					89,
+					33,
+					28
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						[],
+						[],
+						[],
+						{
+							"player": 0,
+							"response": [
+								[
+									80,
+									79,
+									83,
+									89,
+									33,
+									4
+								],
+								[
+									80,
+									79,
+									83,
+									89,
+									33,
+									28
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								80,
+								79,
+								83,
+								89,
+								33,
+								4
+							],
+							[
+								80,
+								79,
+								83,
+								89,
+								33,
+								28
+							]
+						],
+						"type": "triple_pairs",
+						"points": "7"
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 106,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 3,
+			"verdict": "OK",
+			"response": [
+				[
+					29,
+					31,
+					32,
+					88,
+					37,
+					38
+				],
+				[
+					29,
+					31,
+					32,
+					88,
+					37,
+					38
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						[],
+						[],
+						{
+							"player": 0,
+							"response": [
+								[
+									80,
+									79,
+									83,
+									89,
+									33,
+									4
+								],
+								[
+									80,
+									79,
+									83,
+									89,
+									33,
+									28
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									29,
+									31,
+									32,
+									88,
+									37,
+									38
+								],
+								[
+									29,
+									31,
+									32,
+									88,
+									37,
+									38
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								29,
+								31,
+								32,
+								88,
+								37,
+								38
+							],
+							[
+								29,
+								31,
+								32,
+								88,
+								37,
+								38
+							]
+						],
+						"type": "triple_pairs",
+						"points": "8"
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 110,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 3,
+			"verdict": "OK",
+			"response": [
+				[
+					40,
+					42,
+					101,
+					51,
+					103,
+					58
+				],
+				[
+					40,
+					42,
+					101,
+					51,
+					103,
+					44
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						[],
+						{
+							"player": 0,
+							"response": [
+								[
+									80,
+									79,
+									83,
+									89,
+									33,
+									4
+								],
+								[
+									80,
+									79,
+									83,
+									89,
+									33,
+									28
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									29,
+									31,
+									32,
+									88,
+									37,
+									38
+								],
+								[
+									29,
+									31,
+									32,
+									88,
+									37,
+									38
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									40,
+									42,
+									101,
+									51,
+									103,
+									58
+								],
+								[
+									40,
+									42,
+									101,
+									51,
+									103,
+									44
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								40,
+								42,
+								101,
+								51,
+								103,
+								58
+							],
+							[
+								40,
+								42,
+								101,
+								51,
+								103,
+								44
+							]
+						],
+						"type": "triple_pairs",
+						"points": "J"
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 3,
+			"verdict": "OK",
+			"response": [
+				[
+					20,
+					22,
+					74,
+					75,
+					77
+				],
+				[
+					20,
+					22,
+					74,
+					75,
+					77
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[
+									80,
+									79,
+									83,
+									89,
+									33,
+									4
+								],
+								[
+									80,
+									79,
+									83,
+									89,
+									33,
+									28
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									29,
+									31,
+									32,
+									88,
+									37,
+									38
+								],
+								[
+									29,
+									31,
+									32,
+									88,
+									37,
+									38
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									40,
+									42,
+									101,
+									51,
+									103,
+									58
+								],
+								[
+									40,
+									42,
+									101,
+									51,
+									103,
+									44
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									20,
+									22,
+									74,
+									75,
+									77
+								],
+								[
+									20,
+									22,
+									74,
+									75,
+									77
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								20,
+								22,
+								74,
+								75,
+								77
+							],
+							[
+								20,
+								22,
+								74,
+								75,
+								77
+							]
+						],
+						"type": "bomb",
+						"points": [
+							5,
+							"6"
+						]
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[
+									29,
+									31,
+									32,
+									88,
+									37,
+									38
+								],
+								[
+									29,
+									31,
+									32,
+									88,
+									37,
+									38
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									40,
+									42,
+									101,
+									51,
+									103,
+									58
+								],
+								[
+									40,
+									42,
+									101,
+									51,
+									103,
+									44
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									20,
+									22,
+									74,
+									75,
+									77
+								],
+								[
+									20,
+									22,
+									74,
+									75,
+									77
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[
+									40,
+									42,
+									101,
+									51,
+									103,
+									58
+								],
+								[
+									40,
+									42,
+									101,
+									51,
+									103,
+									44
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									20,
+									22,
+									74,
+									75,
+									77
+								],
+								[
+									20,
+									22,
+									74,
+									75,
+									77
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[
+									20,
+									22,
+									74,
+									75,
+									77
+								],
+								[
+									20,
+									22,
+									74,
+									75,
+									77
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 2,
+			"verdict": "OK",
+			"response": [
+				[
+					16,
+					70,
+					71,
+					67,
+					68
+				],
+				[
+					16,
+					70,
+					71,
+					67,
+					68
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									16,
+									70,
+									71,
+									67,
+									68
+								],
+								[
+									16,
+									70,
+									71,
+									67,
+									68
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								16,
+								70,
+								71,
+								67,
+								68
+							],
+							[
+								16,
+								70,
+								71,
+								67,
+								68
+							]
+						],
+						"type": "set",
+						"points": [
+							"5",
+							"4"
+						]
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 106,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					41,
+					43,
+					94,
+					49,
+					102
+				],
+				[
+					41,
+					43,
+					94,
+					49,
+					102
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									16,
+									70,
+									71,
+									67,
+									68
+								],
+								[
+									16,
+									70,
+									71,
+									67,
+									68
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									41,
+									43,
+									94,
+									49,
+									102
+								],
+								[
+									41,
+									43,
+									94,
+									49,
+									102
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								41,
+								43,
+								94,
+								49,
+								102
+							],
+							[
+								41,
+								43,
+								94,
+								49,
+								102
+							]
+						],
+						"type": "set",
+						"points": [
+							"J",
+							"K"
+						]
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					44,
+					98,
+					100,
+					25,
+					78
+				],
+				[
+					44,
+					98,
+					100,
+					25,
+					78
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									16,
+									70,
+									71,
+									67,
+									68
+								],
+								[
+									16,
+									70,
+									71,
+									67,
+									68
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									41,
+									43,
+									94,
+									49,
+									102
+								],
+								[
+									41,
+									43,
+									94,
+									49,
+									102
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									44,
+									98,
+									100,
+									25,
+									78
+								],
+								[
+									44,
+									98,
+									100,
+									25,
+									78
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								44,
+								98,
+								100,
+								25,
+								78
+							],
+							[
+								44,
+								98,
+								100,
+								25,
+								78
+							]
+						],
+						"type": "set",
+						"points": [
+							"Q",
+							"7"
+						]
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 111,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 2,
+			"verdict": "OK",
+			"response": [
+				[
+					2,
+					3,
+					56,
+					13,
+					14
+				],
+				[
+					2,
+					3,
+					56,
+					13,
+					14
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[
+									16,
+									70,
+									71,
+									67,
+									68
+								],
+								[
+									16,
+									70,
+									71,
+									67,
+									68
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									41,
+									43,
+									94,
+									49,
+									102
+								],
+								[
+									41,
+									43,
+									94,
+									49,
+									102
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									44,
+									98,
+									100,
+									25,
+									78
+								],
+								[
+									44,
+									98,
+									100,
+									25,
+									78
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									2,
+									3,
+									56,
+									13,
+									14
+								],
+								[
+									2,
+									3,
+									56,
+									13,
+									14
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								2,
+								3,
+								56,
+								13,
+								14
+							],
+							[
+								2,
+								3,
+								56,
+								13,
+								14
+							]
+						],
+						"type": "set",
+						"points": [
+							"A",
+							"4"
+						]
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 113,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[
+									41,
+									43,
+									94,
+									49,
+									102
+								],
+								[
+									41,
+									43,
+									94,
+									49,
+									102
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									44,
+									98,
+									100,
+									25,
+									78
+								],
+								[
+									44,
+									98,
+									100,
+									25,
+									78
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									2,
+									3,
+									56,
+									13,
+									14
+								],
+								[
+									2,
+									3,
+									56,
+									13,
+									14
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 110,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					5,
+					6,
+					61,
+					1,
+					54
+				],
+				[
+					5,
+					6,
+					61,
+					1,
+					54
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[
+									44,
+									98,
+									100,
+									25,
+									78
+								],
+								[
+									44,
+									98,
+									100,
+									25,
+									78
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									2,
+									3,
+									56,
+									13,
+									14
+								],
+								[
+									2,
+									3,
+									56,
+									13,
+									14
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									5,
+									6,
+									61,
+									1,
+									54
+								],
+								[
+									5,
+									6,
+									61,
+									1,
+									54
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								5,
+								6,
+								61,
+								1,
+								54
+							],
+							[
+								5,
+								6,
+								61,
+								1,
+								54
+							]
+						],
+						"type": "set",
+						"points": [
+							"2",
+							"A"
+						]
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[
+									2,
+									3,
+									56,
+									13,
+									14
+								],
+								[
+									2,
+									3,
+									56,
+									13,
+									14
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									5,
+									6,
+									61,
+									1,
+									54
+								],
+								[
+									5,
+									6,
+									61,
+									1,
+									54
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									5,
+									6,
+									61,
+									1,
+									54
+								],
+								[
+									5,
+									6,
+									61,
+									1,
+									54
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 106,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[
+									5,
+									6,
+									61,
+									1,
+									54
+								],
+								[
+									5,
+									6,
+									61,
+									1,
+									54
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					46,
+					47,
+					99
+				],
+				[
+					46,
+					47,
+					99
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									46,
+									47,
+									99
+								],
+								[
+									46,
+									47,
+									99
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								46,
+								47,
+								99
+							],
+							[
+								46,
+								47,
+								99
+							]
+						],
+						"type": "three",
+						"points": "Q"
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									46,
+									47,
+									99
+								],
+								[
+									46,
+									47,
+									99
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									46,
+									47,
+									99
+								],
+								[
+									46,
+									47,
+									99
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 109,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					50,
+					104,
+					105
+				],
+				[
+					50,
+					104,
+					105
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[
+									46,
+									47,
+									99
+								],
+								[
+									46,
+									47,
+									99
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									50,
+									104,
+									105
+								],
+								[
+									50,
+									104,
+									105
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								50,
+								104,
+								105
+							],
+							[
+								50,
+								104,
+								105
+							]
+						],
+						"type": "three",
+						"points": "K"
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 108,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									50,
+									104,
+									105
+								],
+								[
+									50,
+									104,
+									105
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									50,
+									104,
+									105
+								],
+								[
+									50,
+									104,
+									105
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 108,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[
+									50,
+									104,
+									105
+								],
+								[
+									50,
+									104,
+									105
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 110,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					30,
+					82,
+					84,
+					59,
+					60
+				],
+				[
+					30,
+					82,
+					84,
+					59,
+					60
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									30,
+									82,
+									84,
+									59,
+									60
+								],
+								[
+									30,
+									82,
+									84,
+									59,
+									60
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								30,
+								82,
+								84,
+								59,
+								60
+							],
+							[
+								30,
+								82,
+								84,
+								59,
+								60
+							]
+						],
+						"type": "set",
+						"points": [
+							"8",
+							"2"
+						]
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 109,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									30,
+									82,
+									84,
+									59,
+									60
+								],
+								[
+									30,
+									82,
+									84,
+									59,
+									60
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 109,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									30,
+									82,
+									84,
+									59,
+									60
+								],
+								[
+									30,
+									82,
+									84,
+									59,
+									60
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[
+									30,
+									82,
+									84,
+									59,
+									60
+								],
+								[
+									30,
+									82,
+									84,
+									59,
+									60
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 109,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 2,
+			"verdict": "OK",
+			"response": [
+				[
+					36,
+					91,
+					92
+				],
+				[
+					36,
+					91,
+					92
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									36,
+									91,
+									92
+								],
+								[
+									36,
+									91,
+									92
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								36,
+								91,
+								92
+							],
+							[
+								36,
+								91,
+								92
+							]
+						],
+						"type": "three",
+						"points": "0"
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									36,
+									91,
+									92
+								],
+								[
+									36,
+									91,
+									92
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									36,
+									91,
+									92
+								],
+								[
+									36,
+									91,
+									92
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 108,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[
+									36,
+									91,
+									92
+								],
+								[
+									36,
+									91,
+									92
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 110,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					73
+				],
+				[
+					73
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									73
+								],
+								[
+									73
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								73
+							],
+							[
+								73
+							]
+						],
+						"type": "single",
+						"points": "5"
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 109,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					21
+				],
+				[
+					21
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									73
+								],
+								[
+									73
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									21
+								],
+								[
+									21
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								21
+							],
+							[
+								21
+							]
+						],
+						"type": "single",
+						"points": "6"
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					95
+				],
+				[
+					95
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									73
+								],
+								[
+									73
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									21
+								],
+								[
+									21
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									95
+								],
+								[
+									95
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								95
+							],
+							[
+								95
+							]
+						],
+						"type": "single",
+						"points": "J"
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					106
+				],
+				[
+					106
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[
+									73
+								],
+								[
+									73
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									21
+								],
+								[
+									21
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									95
+								],
+								[
+									95
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									106
+								],
+								[
+									106
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								106
+							],
+							[
+								106
+							]
+						],
+						"type": "single",
+						"points": "o"
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 109,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[
+									21
+								],
+								[
+									21
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									95
+								],
+								[
+									95
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									106
+								],
+								[
+									106
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[
+									95
+								],
+								[
+									95
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									106
+								],
+								[
+									106
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					53
+				],
+				[
+					53
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[
+									106
+								],
+								[
+									106
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									53
+								],
+								[
+									53
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								53
+							],
+							[
+								53
+							]
+						],
+						"type": "single",
+						"points": "O"
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 111,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									53
+								],
+								[
+									53
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									53
+								],
+								[
+									53
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 108,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[
+									53
+								],
+								[
+									53
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 2,
+			"verdict": "OK",
+			"response": [
+				[
+					8,
+					10,
+					62,
+					39,
+					93
+				],
+				[
+					8,
+					10,
+					62,
+					39,
+					93
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									8,
+									10,
+									62,
+									39,
+									93
+								],
+								[
+									8,
+									10,
+									62,
+									39,
+									93
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								8,
+								10,
+								62,
+								39,
+								93
+							],
+							[
+								8,
+								10,
+								62,
+								39,
+								93
+							]
+						],
+						"type": "set",
+						"points": [
+							"3",
+							"0"
+						]
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					24,
+					26,
+					27,
+					18,
+					19
+				],
+				[
+					24,
+					26,
+					27,
+					18,
+					19
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									8,
+									10,
+									62,
+									39,
+									93
+								],
+								[
+									8,
+									10,
+									62,
+									39,
+									93
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									24,
+									26,
+									27,
+									18,
+									19
+								],
+								[
+									24,
+									26,
+									27,
+									18,
+									19
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								24,
+								26,
+								27,
+								18,
+								19
+							],
+							[
+								24,
+								26,
+								27,
+								18,
+								19
+							]
+						],
+						"type": "set",
+						"points": [
+							"7",
+							"5"
+						]
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 109,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									8,
+									10,
+									62,
+									39,
+									93
+								],
+								[
+									8,
+									10,
+									62,
+									39,
+									93
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									24,
+									26,
+									27,
+									18,
+									19
+								],
+								[
+									24,
+									26,
+									27,
+									18,
+									19
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 128,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 2,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[
+									8,
+									10,
+									62,
+									39,
+									93
+								],
+								[
+									8,
+									10,
+									62,
+									39,
+									93
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									24,
+									26,
+									27,
+									18,
+									19
+								],
+								[
+									24,
+									26,
+									27,
+									18,
+									19
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 119,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[
+									24,
+									26,
+									27,
+									18,
+									19
+								],
+								[
+									24,
+									26,
+									27,
+									18,
+									19
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 108,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					9,
+					63,
+					65,
+					23,
+					76
+				],
+				[
+					9,
+					63,
+					65,
+					23,
+					76
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									9,
+									63,
+									65,
+									23,
+									76
+								],
+								[
+									9,
+									63,
+									65,
+									23,
+									76
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								9,
+								63,
+								65,
+								23,
+								76
+							],
+							[
+								9,
+								63,
+								65,
+								23,
+								76
+							]
+						],
+						"type": "set",
+						"points": [
+							"3",
+							"6"
+						]
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 108,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									9,
+									63,
+									65,
+									23,
+									76
+								],
+								[
+									9,
+									63,
+									65,
+									23,
+									76
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 110,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									9,
+									63,
+									65,
+									23,
+									76
+								],
+								[
+									9,
+									63,
+									65,
+									23,
+									76
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 112,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					12,
+					15,
+					69,
+					0,
+					55
+				],
+				[
+					12,
+					15,
+					69,
+					0,
+					55
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[
+									9,
+									63,
+									65,
+									23,
+									76
+								],
+								[
+									9,
+									63,
+									65,
+									23,
+									76
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									12,
+									15,
+									69,
+									0,
+									55
+								],
+								[
+									12,
+									15,
+									69,
+									0,
+									55
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								12,
+								15,
+								69,
+								0,
+								55
+							],
+							[
+								12,
+								15,
+								69,
+								0,
+								55
+							]
+						],
+						"type": "set",
+						"points": [
+							"4",
+							"A"
+						]
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 112,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									12,
+									15,
+									69,
+									0,
+									55
+								],
+								[
+									12,
+									15,
+									69,
+									0,
+									55
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 112,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									12,
+									15,
+									69,
+									0,
+									55
+								],
+								[
+									12,
+									15,
+									69,
+									0,
+									55
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 112,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[
+									12,
+									15,
+									69,
+									0,
+									55
+								],
+								[
+									12,
+									15,
+									69,
+									0,
+									55
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 111,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					72
+				],
+				[
+					72
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									72
+								],
+								[
+									72
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								72
+							],
+							[
+								72
+							]
+						],
+						"type": "single",
+						"points": "5"
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 112,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					34
+				],
+				[
+					34
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									72
+								],
+								[
+									72
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									34
+								],
+								[
+									34
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								34
+							],
+							[
+								34
+							]
+						],
+						"type": "single",
+						"points": "9"
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 111,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					45
+				],
+				[
+					45
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									72
+								],
+								[
+									72
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									34
+								],
+								[
+									34
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									45
+								],
+								[
+									45
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								45
+							],
+							[
+								45
+							]
+						],
+						"type": "single",
+						"points": "Q"
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 111,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					52
+				],
+				[
+					52
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[
+									72
+								],
+								[
+									72
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									34
+								],
+								[
+									34
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									45
+								],
+								[
+									45
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									52
+								],
+								[
+									52
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								52
+							],
+							[
+								52
+							]
+						],
+						"type": "single",
+						"points": "o"
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 112,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					107
+				],
+				[
+					107
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[
+									34
+								],
+								[
+									34
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									45
+								],
+								[
+									45
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									52
+								],
+								[
+									52
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									107
+								],
+								[
+									107
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								107
+							],
+							[
+								107
+							]
+						],
+						"type": "single",
+						"points": "O"
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 112,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[
+									45
+								],
+								[
+									45
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									52
+								],
+								[
+									52
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									107
+								],
+								[
+									107
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 113,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[
+									52
+								],
+								[
+									52
+								]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									107
+								],
+								[
+									107
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 113,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[
+									107
+								],
+								[
+									107
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 113,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					7
+				],
+				[
+					7
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									7
+								],
+								[
+									7
+								]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								7
+							],
+							[
+								7
+							]
+						],
+						"type": "single",
+						"points": "2"
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 115,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									7
+								],
+								[
+									7
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 115,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									7
+								],
+								[
+									7
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 115,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"1": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[
+									7
+								],
+								[
+									7
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 1
+			}
+		},
+		"time": 113,
+		"verdict": "OK"
+	},
+	{
+		"1": {
+			"keep_running": true,
+			"memory": 378,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					48
+				],
+				[
+					48
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									48
+								],
+								[
+									48
+								]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": 1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 1,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								48
+							],
+							[
+								48
+							]
+						],
+						"type": "single",
+						"points": "K"
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 113,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									48
+								],
+								[
+									48
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": 1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 114,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					57
+				],
+				[
+					57
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 1,
+							"response": [
+								[
+									48
+								],
+								[
+									48
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									57
+								],
+								[
+									57
+								]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								57
+							],
+							[
+								57
+							]
+						],
+						"type": "single",
+						"points": "A"
+					}
+				},
+				"player": 0,
+				"new_done": 1
+			}
+		},
+		"time": 111,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 1,
+							"response": [
+								[
+									48
+								],
+								[
+									48
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									57
+								],
+								[
+									57
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 107,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									57
+								],
+								[
+									57
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 109,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					64
+				],
+				[
+					64
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[
+									57
+								],
+								[
+									57
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									64
+								],
+								[
+									64
+								]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								64
+							],
+							[
+								64
+							]
+						],
+						"type": "single",
+						"points": "3"
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 111,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					17
+				],
+				[
+					17
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									64
+								],
+								[
+									64
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									17
+								],
+								[
+									17
+								]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								17
+							],
+							[
+								17
+							]
+						],
+						"type": "single",
+						"points": "5"
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 108,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					87
+				],
+				[
+					87
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									64
+								],
+								[
+									64
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									17
+								],
+								[
+									17
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									87
+								],
+								[
+									87
+								]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								87
+							],
+							[
+								87
+							]
+						],
+						"type": "single",
+						"points": "9"
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 108,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[
+									64
+								],
+								[
+									64
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									17
+								],
+								[
+									17
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									87
+								],
+								[
+									87
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 109,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					97
+				],
+				[
+					97
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[
+									17
+								],
+								[
+									17
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									87
+								],
+								[
+									87
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									97
+								],
+								[
+									97
+								]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								97
+							],
+							[
+								97
+							]
+						],
+						"type": "single",
+						"points": "J"
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 110,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[
+									87
+								],
+								[
+									87
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									97
+								],
+								[
+									97
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 109,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									97
+								],
+								[
+									97
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 109,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					11
+				],
+				[
+					11
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[
+									97
+								],
+								[
+									97
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									11
+								],
+								[
+									11
+								]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								11
+							],
+							[
+								11
+							]
+						],
+						"type": "single",
+						"points": "3"
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 108,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					28
+				],
+				[
+					28
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									11
+								],
+								[
+									11
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									28
+								],
+								[
+									28
+								]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								28
+							],
+							[
+								28
+							]
+						],
+						"type": "single",
+						"points": "8"
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 109,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					35
+				],
+				[
+					35
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									11
+								],
+								[
+									11
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									28
+								],
+								[
+									28
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									35
+								],
+								[
+									35
+								]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								35
+							],
+							[
+								35
+							]
+						],
+						"type": "single",
+						"points": "9"
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 109,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					90
+				],
+				[
+					90
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[
+									11
+								],
+								[
+									11
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									28
+								],
+								[
+									28
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									35
+								],
+								[
+									35
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									90
+								],
+								[
+									90
+								]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								90
+							],
+							[
+								90
+							]
+						],
+						"type": "single",
+						"points": "0"
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 109,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					96
+				],
+				[
+					96
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[
+									28
+								],
+								[
+									28
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[
+									35
+								],
+								[
+									35
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									90
+								],
+								[
+									90
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									96
+								],
+								[
+									96
+								]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								96
+							],
+							[
+								96
+							]
+						],
+						"type": "single",
+						"points": "J"
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 118,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[
+									35
+								],
+								[
+									35
+								]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									90
+								],
+								[
+									90
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									96
+								],
+								[
+									96
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 117,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"2": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[
+									90
+								],
+								[
+									90
+								]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									96
+								],
+								[
+									96
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [
+						1
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 2
+			}
+		},
+		"time": 112,
+		"verdict": "OK"
+	},
+	{
+		"2": {
+			"keep_running": true,
+			"memory": 358,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					85
+				],
+				[
+					85
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[
+									96
+								],
+								[
+									96
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									85
+								],
+								[
+									85
+								]
+							]
+						}
+					],
+					"done": [
+						1,
+						2
+					],
+					"pass_on": 2,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 2,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								85
+							],
+							[
+								85
+							]
+						],
+						"type": "single",
+						"points": "8"
+					}
+				},
+				"player": 3
+			}
+		},
+		"time": 108,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									85
+								],
+								[
+									85
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [
+						1,
+						2
+					],
+					"pass_on": 2,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 108,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					86
+				],
+				[
+					86
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"3": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 0,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 2,
+							"response": [
+								[
+									85
+								],
+								[
+									85
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									86
+								],
+								[
+									86
+								]
+							]
+						}
+					],
+					"done": [
+						1,
+						2
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								86
+							],
+							[
+								86
+							]
+						],
+						"type": "single",
+						"points": "9"
+					}
+				},
+				"player": 3,
+				"new_done": 1
+			}
+		},
+		"time": 108,
+		"verdict": "OK"
+	},
+	{
+		"3": {
+			"keep_running": true,
+			"memory": 352,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[],
+				[]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "request",
+			"content": {
+				"0": {
+					"stage": "play",
+					"history": [
+						{
+							"player": 2,
+							"response": [
+								[
+									85
+								],
+								[
+									85
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						},
+						{
+							"player": 0,
+							"response": [
+								[
+									86
+								],
+								[
+									86
+								]
+							]
+						},
+						{
+							"player": 3,
+							"response": [
+								[],
+								[]
+							]
+						}
+					],
+					"done": [
+						1,
+						2
+					],
+					"pass_on": -1,
+					"global": {
+						"level": "2",
+						"tribute": 0,
+						"first": null,
+						"last": null,
+						"tribute_cards": {},
+						"return_cards": {},
+						"resist": false
+					}
+				}
+			},
+			"display": {
+				"event": {
+					"currplayer": 3,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[],
+							[]
+						],
+						"type": "pass",
+						"points": []
+					}
+				},
+				"player": 0
+			}
+		},
+		"time": 110,
+		"verdict": "OK"
+	},
+	{
+		"0": {
+			"keep_running": true,
+			"memory": 217,
+			"time": 1,
+			"verdict": "OK",
+			"response": [
+				[
+					66
+				],
+				[
+					66
+				]
+			]
+		}
+	},
+	{
+		"keep_running": false,
+		"memory": 20,
+		"output": {
+			"command": "finish",
+			"content": {
+				"0": 0,
+				"1": 1,
+				"2": 0,
+				"3": 1
+			},
+			"display": {
+				"event": {
+					"currplayer": 0,
+					"action": "play",
+					"poker": {
+						"poker": [
+							[
+								66
+							],
+							[
+								66
+							]
+						],
+						"type": "single",
+						"points": "4"
+					}
+				},
+				"score": {
+					"0": 0,
+					"1": 1,
+					"2": 0,
+					"3": 1
+				}
+			}
+		},
+		"time": 110,
+		"verdict": "OK"
+	}
+]
