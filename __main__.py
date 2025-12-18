@@ -39,7 +39,7 @@ STATE_DIM = 66
 ACTION_DIM = 31
 
 policy_net = PolicyValueNet(STATE_DIM, ACTION_DIM)
-MODEL_PATH = '/data/GuanDan_001.pt'
+MODEL_PATH = '/data/Zero_A2G.pt'
 try:
     loaded = torch.load(MODEL_PATH, map_location='cpu')
     if isinstance(loaded, dict):
@@ -80,10 +80,7 @@ def handle_deal(req):
     return []
 
 def handle_play(req):
-    pass_on = req.get('pass_on', -1)
-    if pass_on == -1:
-        STATE['last_move'] = {'player': -1, 'action': [], 'claim': []}
-
+    STATE['last_move'] = {'player': -1, 'action': [], 'claim': []}
     short_history = req.get('history', None)
     if short_history:
         for record in short_history:
@@ -98,11 +95,11 @@ def handle_play(req):
                     'action': action,
                     'claim': claim
                 }
-                STATE['history'].append(rec_converted)
-
-                if player_id == pass_on:
-                    STATE['last_move'] = rec_converted
-
+                if rec_converted not in STATE['history']:
+                    STATE['history'].append(rec_converted)
+                    if player_id != STATE['id'] and len(action) != 0:
+                        STATE['last_move'] = rec_converted
+                 
     obs = {
         'id': STATE['id'],
         'level': STATE['level'],
@@ -124,6 +121,8 @@ def process_request(raw_line):
         req = json.loads(raw_line)
     except Exception:
         return []
+    if 'requests' in req:
+        req = req['requests'][0]
 
     stage = req.get('stage')
     if stage == 'deal':
@@ -143,13 +142,9 @@ def main():
         if not line:
             continue
         response = process_request(line)
-        try:
-            print(json.dumps(response, separators=(',', ':')))
-        except Exception:
-            print('[]')
+        print(json.dumps({'response': response}))
         print('>>>BOTZONE_REQUEST_KEEP_RUNNING<<<')
         sys.stdout.flush()
-
 
 if __name__ == '__main__':
     main()
