@@ -59,14 +59,8 @@ def create_rl_agents(env: GuanDanEnv, net: PolicyValueNet, feature_encoder: Feat
 def choose_opponent_mode(update_idx: int, warm_up: int, has_past_ckpt: bool) -> str:
     '''
     Return one of: 'rule', 'self', 'past', 'random'.
-
-    Schedule:
-      - update_idx < warm_up:
-          80% rule, 15% self, 5% random
-      - else:
-          10% rule, 60% self, 25% past, 5% random
-        If no past checkpoints available, reallocate that mass into self-play.
     '''
+    
     if update_idx < warm_up:
         r = random.random()
         if r < 0.4:
