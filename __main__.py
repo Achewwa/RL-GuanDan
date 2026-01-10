@@ -210,10 +210,6 @@ def _update_table_state_with_move(move):
     action = move.get('action', []) or []
     claim = move.get('claim', []) or []
 
-    # If last player (who played the table card) has already finished, force reset.
-    if STATE['table_last_player'] in STATE['done']:
-        _table_reset()
-
     # If action is non-empty => new table card
     if len(action) > 0:
         STATE['table_last_move'] = {'player': pid, 'action': action, 'claim': claim}
@@ -231,11 +227,6 @@ def _update_table_state_with_move(move):
     # If all other active players (except last_player) have passed, reset for new lead
     active = set(_active_players())
     lastp = int(STATE['table_last_player'])
-
-    # If lastp is not active anymore, also reset
-    if lastp not in active:
-        _table_reset()
-        return
 
     others = active - {lastp}
     if others and others.issubset(STATE['table_pass_set']):
@@ -285,9 +276,7 @@ def handle_play(req):
         'id': STATE['id'],
         'level': STATE['level'],
         'deck': sorted(STATE['deck']),
-        # IMPORTANT: provide FULL history, consistent with training-time feature expectations
         'history': STATE['history_full'],
-        # IMPORTANT: provide CORRECT current table card to follow (or empty for lead)
         'last_move': STATE['table_last_move']
     }
 
@@ -297,11 +286,9 @@ def handle_play(req):
     action = selected.get('action', []) or []
     claim = selected.get('claim', None)
 
-    # Be strict: if claim missing, default to action (but this should rarely happen)
     if claim is None or claim == []:
         claim = action
 
-    # Update our deck using actual played cards (action)
     _remove_cards_from_deck(action)
 
     return [action, claim]
@@ -317,7 +304,6 @@ def process_request(raw_line):
     except Exception:
         return []
 
-    # Some botzone wrappers put requests in a list; keep your behavior
     if isinstance(req, dict) and 'requests' in req:
         req = req['requests'][0]
 
