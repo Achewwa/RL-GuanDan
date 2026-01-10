@@ -24,7 +24,7 @@ from typing import Dict, List, Any
 
 TRAIN_LEVELS = ['2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K', 'A']
 # Toggle to train across all levels or stick to one fixed level.
-train_all_levels = True
+train_all_levels = False
 fixed_level = '2'
 
 
@@ -419,7 +419,7 @@ def main() -> None:
             # === 修改开始 ===
             # 1. 创建基于 run_name 的独立文件夹
             # 例如: models/run_A/ 或 models/run_B/
-            save_dir = f'models/A2E'
+            save_dir = f'models/{args.run_name}'
             os.makedirs(save_dir, exist_ok=True)
             
             # 2. 文件名只需要包含 update_idx

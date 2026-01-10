@@ -4,6 +4,10 @@ from typing import List, Any
 
 @dataclass
 class Transition:
+    # --- identifiers (NEW) ---
+    episode_id: int
+    player_id: int
+    
     state: Any  # encoded state vector
     candidate_action_feats: Any  # all candidate action encodings for this step
     action_index: int
