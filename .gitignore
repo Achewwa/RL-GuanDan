@@ -4,5 +4,5 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.pt
 logs/
+results/

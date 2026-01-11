@@ -1,6 +1,8 @@
 import os
 import random
 from typing import List, Tuple, Dict, Optional
+import csv
+import json
 
 import numpy as np
 import torch
@@ -60,31 +62,41 @@ def choose_opponent_mode(update_idx: int, warm_up: int, has_past_ckpt: bool) -> 
     '''
     Return one of: 'rule', 'self', 'past', 'random'.
     '''
-    
+    #=============================#
+    #=======HyperParameters=======#
+    #=============================#
+    rule_1 = 0.3
+    self_1 = 0.7
+    random_1 = 0.0
+
+    rule_2 = 0.1
+    self_2 = 0.7
+    past_2 = 0.15
+    random_2 = 0.05
+
     if update_idx < warm_up:
         r = random.random()
-        if r < 0.4:
+        if r < rule_1:
             return 'rule'
-        if r < 0.95:
+        if r < rule_1 + self_1:
             return 'self'
         return 'random'
 
     # after warmup
     if not has_past_ckpt:
-        # 10% rule, 85% self, 5% random
         r = random.random()
-        if r < 0.10:
+        if r < rule_2:
             return 'rule'
-        if r < 0.95:
+        if r < rule_2 + self_2 + past_2:
             return 'self'
         return 'random'
 
     r = random.random()
-    if r < 0.10:
+    if r < rule_2:
         return 'rule'
-    if r < 0.70:
+    if r < self_2 + rule_2:
         return 'self'
-    if r < 0.95:
+    if r < self_2 + rule_2 + past_2:
         return 'past'
     return 'random'
 
@@ -542,6 +554,30 @@ def main() -> None:
         if fn.endswith('.pt') and fn.startswith('ppo_checkpoint'):
             checkpoint_pool.append(os.path.join(ckpt_dir, fn))
 
+    result_dir = os.path.join('results', '2')
+    os.makedirs(result_dir, exist_ok=True)
+
+    log_csv_path = os.path.join(result_dir, 'train_log.csv')
+    log_json_path = os.path.join(result_dir, 'train_log.json')
+
+    LOG_FIELDS = [
+        'update',
+        'avg_episode_reward',
+
+        # eval vs rule-based
+        'eval_rule_win', 'eval_rule_p1', 'eval_rule_p2', 'eval_rule_p3',
+
+        # eval vs random
+        'eval_rand_win', 'eval_rand_p1', 'eval_rand_p2', 'eval_rand_p3',
+    ]
+
+    if not os.path.exists(log_csv_path):
+        with open(log_csv_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=LOG_FIELDS)
+            writer.writeheader()
+
+    train_log_records = []
+
     for update_idx in range(1, total_updates + 1):
         # === MODIFIED: mixed-opponent rollout ===
         collect_rollout(
@@ -587,23 +623,65 @@ def main() -> None:
 
         print(f'Update {update_idx}: avg episode reward {avg_episode_reward:.3f}')
 
+        eval_rule = None
+        eval_rand = None
+
         if update_idx % eval_interval == 0:
-            eval_ret = evaluate_policy(env, RuleBasedAgent, policy_value_net, feature_encoder, action_generator, num_eval_episodes, device)
+            eval_rule = evaluate_policy(
+                env, RuleBasedAgent, policy_value_net, feature_encoder, action_generator,
+                num_eval_episodes, device
+            )
             print(
                 f'Eval after update {update_idx}: RL v.s. Rule_based:\n'
-                f'win rate {eval_ret[0]:.2f}\n+1 rate {eval_ret[1]:.2f}\n+2 rate {eval_ret[2]:.2f}\n+3 rate {eval_ret[3]:.2f}\n'
-            )
-            eval_ret = evaluate_policy(env, RandomAgent, policy_value_net, feature_encoder, action_generator, num_eval_episodes, device)
-            print(
-                f'Eval after update {update_idx}: RL v.s. Random:\n'
-                f'win rate {eval_ret[0]:.2f}\n+1 rate {eval_ret[1]:.2f}\n+2 rate {eval_ret[2]:.2f}\n+3 rate {eval_ret[3]:.2f}\n'
+                f'win rate {eval_rule[0]:.2f}\n+1 rate {eval_rule[1]:.2f}\n+2 rate {eval_rule[2]:.2f}\n+3 rate {eval_rule[3]:.2f}\n'
             )
 
-        if update_idx % save_interval == 0:
-            ckpt_path = os.path.join(ckpt_dir, f'ppo_checkpoint{update_idx}.pt')
-            torch.save(policy_value_net.state_dict(), ckpt_path)
-            checkpoint_pool.append(ckpt_path)
-            print(f'Checkpoint saved to {ckpt_path}')
+            eval_rand = evaluate_policy(
+                env, RandomAgent, policy_value_net, feature_encoder, action_generator,
+                num_eval_episodes, device
+            )
+            print(
+                f'Eval after update {update_idx}: RL v.s. Random:\n'
+                f'win rate {eval_rand[0]:.2f}\n+1 rate {eval_rand[1]:.2f}\n+2 rate {eval_rand[2]:.2f}\n+3 rate {eval_rand[3]:.2f}\n'
+            )
+
+        # ---- write one row (always) ----
+        row = {
+            'update': int(update_idx),
+            'avg_episode_reward': float(avg_episode_reward),
+
+            'eval_rule_win': None,
+            'eval_rule_p1': None,
+            'eval_rule_p2': None,
+            'eval_rule_p3': None,
+
+            'eval_rand_win': None,
+            'eval_rand_p1': None,
+            'eval_rand_p2': None,
+            'eval_rand_p3': None,
+        }
+
+        if eval_rule is not None:
+            row['eval_rule_win'] = float(eval_rule[0])
+            row['eval_rule_p1']  = float(eval_rule[1])
+            row['eval_rule_p2']  = float(eval_rule[2])
+            row['eval_rule_p3']  = float(eval_rule[3])
+
+        if eval_rand is not None:
+            row['eval_rand_win'] = float(eval_rand[0])
+            row['eval_rand_p1']  = float(eval_rand[1])
+            row['eval_rand_p2']  = float(eval_rand[2])
+            row['eval_rand_p3']  = float(eval_rand[3])
+
+        # append to csv
+        with open(log_csv_path, 'a', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=LOG_FIELDS)
+            writer.writerow(row)
+
+        # keep in memory + dump json snapshot
+        train_log_records.append(row)
+        with open(log_json_path, 'w', encoding='utf-8') as f:
+            json.dump(train_log_records, f, ensure_ascii=False, indent=2)
 
 
 if __name__ == '__main__':
